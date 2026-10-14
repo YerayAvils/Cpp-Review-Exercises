@@ -1,3 +1,8 @@
+/*
+Ejercicio: Vector básico
+Objetivo: practicar push_back, front, back, size, pop_back, clear y empty.
+*/
+
 #include <iostream>
 #include <vector>
 
