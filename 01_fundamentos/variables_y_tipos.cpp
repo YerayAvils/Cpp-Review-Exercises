@@ -1,6 +1,8 @@
 // Ejercicio: Variables y sus tipos
+// Objetivo: Repasar operadores aritméticos
 
 #include <iostream>
+#include <string>
 
 using namespace std;
 
