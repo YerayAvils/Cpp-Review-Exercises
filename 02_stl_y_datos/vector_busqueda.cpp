@@ -15,7 +15,7 @@ int main(){
     int num, busc;
 
     for(int i = 1; i <= 10; i++){
-        cout << "Introduzca 10 numeros (" << i - 1 << "): " ;
+        cout << "Introduzca 10 numeros (" << i << "): " ;
         cin >> num;
         numeros.push_back(num);
     }
@@ -26,7 +26,7 @@ int main(){
     if (!idPosiciones.empty()){
         mostrarId(idPosiciones, busc);
     }else{
-        cout << "Valor fuera del vector" << endl;
+        cout << "Valor no encontrado en el vector" << endl;
     }
     
 
