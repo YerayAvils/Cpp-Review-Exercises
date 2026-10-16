@@ -6,32 +6,49 @@
 
 using namespace std;
 
-void buscarEnVector(const vector<int> &digitos, const int num);
+vector<int> buscarEnVector(const vector<int> &digitos, const int num);
+void mostrarId(const vector<int> &id, const int &num);
 
 
 int main(){
-    vector<int> numeros;
-    double num, busc;
+    vector<int> numeros, idPosiciones;
+    int num, busc;
 
     for(int i = 1; i <= 10; i++){
-        cout << "Introduzca 10 numeros (" << i << "): " ;
+        cout << "Introduzca 10 numeros (" << i - 1 << "): " ;
         cin >> num;
         numeros.push_back(num);
     }
     cout << "\nIntroduzca el numero que desea buscar: ";
     cin >> busc;
 
-    buscarEnVector(numeros, busc);
+    idPosiciones = buscarEnVector(numeros, busc);
+    if (!idPosiciones.empty()){
+        mostrarId(idPosiciones, busc);
+    }else{
+        cout << "Valor fuera del vector" << endl;
+    }
+    
+
 
 
     return 0;
 }
 
-void buscarEnVector(const vector<int> &digitos, const int num){
-    int posicion;
-    for(int i = 0; i < digitos.size(); i++){
+vector<int> buscarEnVector(const vector<int> &digitos, const int num){
+    vector<int> posiciones;
+    int posicion = digitos.size();
+    for(int i = 0; i < posicion; i++){
         if(num == digitos.at(i)){
-            // Imprimir la posicion del numero escogido
+            posiciones.push_back(i);
         }
     }
+    return posiciones;
 }
+
+void mostrarId(const vector<int> &id, const int &num){
+    for(auto e : id){
+        cout << num << " En la posicion: " << e << " del vector" << endl;
+    }
+}
+// cout << num << "En la posicion: " << i << " del vector" << endl;
