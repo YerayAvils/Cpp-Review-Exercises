@@ -28,9 +28,6 @@ int main(){
     }else{
         cout << "Valor no encontrado en el vector" << endl;
     }
-    
-
-
 
     return 0;
 }
@@ -51,4 +48,3 @@ void mostrarId(const vector<int> &id, const int &num){
         cout << num << " En la posicion: " << e << " del vector" << endl;
     }
 }
-// cout << num << "En la posicion: " << i << " del vector" << endl;
