@@ -18,7 +18,7 @@ class Producto{
             cantidad = 0;
         }
         void insertar(string n, double p, int c);
-        void imprimir(const vector<Producto> vec);
+        void imprimir(const vector<Producto> &vec);
 };
 
 int main(){
@@ -66,13 +66,15 @@ int main(){
 }
 
 void Producto::insertar(string n, double p, int c){
-    n = nombre;
-    p = precio;
-    c = cantidad;
+    nombre = n;
+    precio = p;
+    cantidad = c;
 }
 
-void Producto::imprimir(const vector<Producto> vec){
-    for(int i = 0; i < vec.size(); i++){
-        cout << i << endl;
+void Producto::imprimir(const vector<Producto> &vec){
+    for(const auto &e : vec){
+        cout << "Nombre: " << nombre << endl;
+        cout << "Precio: " << precio << endl;
+        cout << "Cantidad: " << cantidad << endl;
     }
 }
