@@ -1,1 +1,16 @@
+# Archivos objeto
+*.o
+*.obj
+
+# Ejecutables con extensión
+*.out
+*.exe
+
+# Archivos de dependencias
+*.d
+
+# Archivos de depuración
+*.dSYM/
+
+# Carpeta
 .vscode/
