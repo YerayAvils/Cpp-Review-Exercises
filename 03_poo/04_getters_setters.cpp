@@ -17,6 +17,7 @@ class Clase{
             numero = n;
             numero2 = n2;
         }
+        
         //Getters
         int getNumero() const;
         int getNumero2() const;
